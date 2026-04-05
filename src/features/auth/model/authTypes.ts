@@ -19,5 +19,7 @@ export interface ILoginResponse {
   lastName: string;
   gender: TGender;
   image: string;
-  token: string;
+  accessToken: string;
+  refreshToken?: string;
+  token?: string;
 }

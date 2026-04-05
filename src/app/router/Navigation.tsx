@@ -5,39 +5,40 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { selectUser } from '@/entities/user';
 
 import { useAppSelector } from '@/shared/lib/hooks/redux';
+import { tokenService } from '@/shared/lib/tokenService';
 
 import { routes } from './routes';
-import type { IRoute } from './types';
+import { AppLayout, type IRoute, RouteAccess } from './types';
 
 const Navigation = () => {
   const user = useAppSelector(selectUser);
-  const isAuthenticated = !!user;
+  const isAuthenticated = !!user || tokenService.isAuthenticated();
 
   const renderRouteElement = (route: IRoute) => {
     let element: React.ReactNode = <route.element />;
 
     switch (route.access) {
-      case 'guest':
+      case RouteAccess.GUEST_ONLY:
         if (isAuthenticated) {
           element = <Navigate to="/products" replace />;
         }
         break;
-      case 'auth':
+      case RouteAccess.AUTH_ONLY:
         if (!isAuthenticated) {
           element = <Navigate to="/login" replace />;
         }
         break;
-      case 'public':
+      case RouteAccess.PUBLIC:
       default:
         break;
     }
 
     switch (route.layout) {
-      case 'main':
+      case AppLayout.MAIN:
         return <MainLayout>{element}</MainLayout>;
-      case 'auth':
+      case AppLayout.AUTH:
         return <AuthLayout>{element}</AuthLayout>;
-      case 'none':
+      case AppLayout.NONE:
       default:
         return element;
     }

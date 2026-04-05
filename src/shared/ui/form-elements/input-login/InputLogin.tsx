@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 
 import type { FC, InputHTMLAttributes } from 'react';
-import { useState } from 'react';
 
 import { CloseSVG, UserSVG } from '@/shared/ui/icons';
 
@@ -25,30 +24,15 @@ const InputLogin: FC<IInputLogin> = ({
   onChange,
   ...props
 }) => {
-  const [internalValue, setInternalValue] = useState('');
-
-  const currentValue = externalValue !== undefined ? externalValue : internalValue;
-  const iconColor = error ? 'var(--color-error)' : 'var(--color-gray-600)';
-  const showClearButton = currentValue && !disabled; // всегда показываем если есть текст
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) {
-      onChange(e);
-    } else {
-      setInternalValue(e.target.value);
-    }
-  };
+  const iconColor = error ? 'var(--color-error)' : 'var(--color-gray-275)';
+  const showClearButton = externalValue && !disabled;
 
   const handleClear = () => {
-    const newValue = '';
-
     if (onChange) {
       const event = {
-        target: { value: newValue, name: props.name },
+        target: { value: '', name: props.name },
       } as React.ChangeEvent<HTMLInputElement>;
       onChange(event);
-    } else {
-      setInternalValue(newValue);
     }
   };
 
@@ -56,7 +40,7 @@ const InputLogin: FC<IInputLogin> = ({
     <div className={styles.wrapper}>
       {label && (
         <Typography
-          variant="body-medium"
+          variant="inter-18"
           className={classNames(styles.label, {
             [styles.error]: error,
           })}
@@ -77,8 +61,8 @@ const InputLogin: FC<IInputLogin> = ({
           className={classNames(styles.input, className)}
           placeholder={placeholder}
           disabled={disabled}
-          value={currentValue}
-          onChange={handleChange}
+          value={externalValue || ''}
+          onChange={onChange}
           {...props}
         />
 
@@ -90,7 +74,7 @@ const InputLogin: FC<IInputLogin> = ({
       </div>
 
       {error && (
-        <Typography variant="body-small" className={styles.errorMessage}>
+        <Typography variant="inter-16" className={styles.errorMessage}>
           {error}
         </Typography>
       )}

@@ -1,21 +1,17 @@
 import cn from 'classnames';
 
-import { alignStyles, colorStyles, type TypographyProps, variantStyles } from './types';
+import { variantStyles } from './types';
+import type { TypographyProps } from './types';
 
 export const Typography = ({
-  variant = 'body',
-  color = 'gray-900',
-  align = 'left',
+  variant = 'opensans-16',
   as: Component = 'p',
   children,
   className,
   ...props
 }: TypographyProps) => {
   return (
-    <Component
-      className={cn(variantStyles[variant], colorStyles[color], alignStyles[align], className)}
-      {...props}
-    >
+    <Component className={cn(variantStyles[variant], className)} {...props}>
       {children}
     </Component>
   );

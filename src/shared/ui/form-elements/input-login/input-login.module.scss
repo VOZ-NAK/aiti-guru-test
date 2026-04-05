@@ -12,7 +12,7 @@
 
 .inputWrapper {
   position: relative;
-  padding: 15.5px 16px 15.5px calc(16px + 14px + 24px);
+  padding: 15.5px calc(16px + 14px + 24px) 15.5px calc(16px + 14px + 24px);
   border: 1.5px solid var(--color-gray-150);
   border-radius: var(--radius-lg);
 
@@ -43,4 +43,8 @@
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
+}
+
+.errorMessage {
+  color: var(--color-error);
 }

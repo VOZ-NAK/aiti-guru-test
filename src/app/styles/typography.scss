@@ -1,144 +1,128 @@
-// Display (Inter SemiBold 40px)
-.text-display {
+// Inter
+.text-inter-40 {
   font-family: var(--font-family-inter);
   font-weight: 600;
-  font-size: var(--font-size-display);
+  font-size: var(--font-size-3xl);
   line-height: var(--line-height-display);
   letter-spacing: var(--letter-spacing-display);
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-xl);
+  }
 }
 
-// Titles (Cairo Bold)
-.text-title-large {
-  font-family: var(--font-family-cairo);
-  font-weight: 700;
-  font-size: var(--font-size-title-large);
-  line-height: var(--line-height-title-large);
-  letter-spacing: var(--letter-spacing-default);
-}
-
-.text-title-medium {
-  font-family: var(--font-family-cairo);
-  font-weight: 700;
-  font-size: var(--font-size-title-medium);
-  line-height: var(--line-height-title-medium);
-  letter-spacing: var(--letter-spacing-default);
-}
-
-.text-title-small {
-  font-family: var(--font-family-cairo);
-  font-weight: 700;
-  font-size: var(--font-size-title-small);
-  line-height: var(--line-height-title-small);
-  letter-spacing: var(--letter-spacing-default);
-}
-
-// Subtitle (Cairo SemiBold 14px)
-.text-subtitle {
-  font-family: var(--font-family-cairo);
-  font-weight: 600;
-  font-size: var(--font-size-subtitle);
-  line-height: var(--line-height-subtitle);
-  letter-spacing: var(--letter-spacing-default);
-}
-
-// Body text (Open Sans Regular)
-.text-body {
-  font-family: var(--font-family-open-sans);
-  font-weight: 400;
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
-  letter-spacing: var(--letter-spacing-default);
-}
-
-.text-body-small {
-  font-family: var(--font-family-open-sans);
-  font-weight: 400;
-  font-size: var(--font-size-body-small);
-  line-height: var(--line-height-body);
-  letter-spacing: var(--letter-spacing-default);
-}
-
-// Body medium
-.text-body-medium {
+.text-inter-18 {
   font-family: var(--font-family-inter);
   font-weight: 500;
   font-size: var(--font-size-md);
   line-height: var(--line-height-body);
-  letter-spacing: var(--letter-spacing-display);
+  letter-spacing: var(--letter-spacing-default);
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-base);
+  }
 }
 
-.text-body-large {
+.text-inter-16 {
   font-family: var(--font-family-inter);
   font-weight: 500;
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-default);
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-sm);
+  }
+}
+
+// Cairo
+.text-cairo-24 {
+  font-family: var(--font-family-cairo);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-title-large);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+.text-cairo-20 {
+  font-family: var(--font-family-cairo);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-title-medium);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+.text-cairo-16 {
+  font-family: var(--font-family-cairo);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-title-small);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+.text-cairo-14 {
+  font-family: var(--font-family-cairo);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-subtitle);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+// Open Sans
+.text-opensans-16 {
+  font-family: var(--font-family-open-sans);
+  font-weight: 400;
+  font-size: var(--font-size-base);
   line-height: var(--line-height-body);
   letter-spacing: var(--letter-spacing-default);
 }
 
-// Caption (Roboto Mono Regular)
-.text-caption {
+.text-opensans-14 {
+  font-family: var(--font-family-open-sans);
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+.text-opensans-16-bold {
+  font-family: var(--font-family-open-sans);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+// Roboto Mono
+.text-roboto-16 {
   font-family: var(--font-family-roboto-mono);
   font-weight: 400;
-  font-size: var(--font-size-caption);
+  font-size: var(--font-size-base);
   line-height: var(--line-height-caption);
   letter-spacing: var(--letter-spacing-default);
 }
 
-// Button (Open Sans Bold)
-.text-button {
-  font-family: var(--font-family-open-sans);
-  font-weight: 700;
-  font-size: var(--font-size-button);
-  line-height: var(--line-height-body);
-  letter-spacing: var(--letter-spacing-default);
-}
-
-// Text colors
-.text-primary {
+.link {
   color: var(--color-primary);
-}
+  transition: opacity 0.3s ease;
+  position: relative;
 
-.text-secondary {
-  color: var(--color-secondary);
-}
+  &:hover {
+    color: var(--color-primary-light);
+  }
 
-.text-error {
-  color: var(--color-error);
-}
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary);
+    left: 0;
+    bottom: 0;
+  }
 
-.text-success {
-  color: var(--color-success);
-}
-
-.text-white {
-  color: var(--color-white);
-}
-
-.text-gray-300 {
-  color: var(--color-gray-300);
-}
-
-.text-gray-500 {
-  color: var(--color-gray-500);
-}
-
-.text-gray-700 {
-  color: var(--color-gray-700);
-}
-
-.text-gray-900 {
-  color: var(--color-gray-900);
-}
-
-// Text alignments
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
+  &:hover::before {
+    background-color: var(--color-primary-light);
+  }
 }

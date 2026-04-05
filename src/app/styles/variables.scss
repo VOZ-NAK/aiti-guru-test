@@ -12,6 +12,8 @@
   --color-gray-100: #f3f3f3;
   --color-gray-150: #ededed;
   --color-gray-200: #ebebeb;
+  --color-gray-250: #e0e0e0;
+  --color-gray-275: #c9c9c9;
   --color-gray-300: #e2e2e2;
   --color-gray-400: #ececeb;
   --color-gray-500: #b2b3b9;
@@ -50,7 +52,7 @@
   --letter-spacing-default: 0%;
 
   // Shadows
-  --shadow-sm: 0px 24px 32px -14px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0px 24px 32px rgba(0, 0, 0, 0.04);
   --shadow-md: 0px 4px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0px 24px 32px rgba(0, 0, 0, 0.1);
 
@@ -59,6 +61,12 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+  --radius-5xl: 34px;
+  --radius-6xl: 40px;
+  --radius-full: 9999px;
 
   // Spacing
   --spacing-4: 4px;

@@ -1,7 +1,6 @@
-// src/shared/lib/hooks/useAuthInit.ts
 import { useEffect } from 'react';
 
-import { setToken } from '@/entities/user';
+import { setToken, setUser } from '@/entities/user';
 
 import { tokenService } from '@/shared/lib/tokenService';
 
@@ -12,8 +11,19 @@ export const useAuthInit = () => {
 
   useEffect(() => {
     const token = tokenService.getToken();
+
     if (token) {
       dispatch(setToken(token));
+
+      const savedUser = localStorage.getItem('user');
+      if (savedUser) {
+        try {
+          const user = JSON.parse(savedUser);
+          dispatch(setUser(user));
+        } catch (error) {
+          console.error('Failed to restore user:', error);
+        }
+      }
     }
   }, [dispatch]);
 };

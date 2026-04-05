@@ -20,29 +20,45 @@ export const useAuth = () => {
         password: data.password,
       }).unwrap();
 
-      tokenService.setToken(response.token, data.rememberMe);
+      const token = response.accessToken || response.token;
 
-      dispatch(setToken(response.token));
-      dispatch(
-        setUser({
-          id: response.id,
-          username: response.username,
-          email: response.email,
-          firstName: response.firstName,
-          lastName: response.lastName,
-          gender: response.gender,
-          image: response.image,
-        })
-      );
+      if (!token) {
+        console.error('Token not found in response!');
+        throw new Error('Token not received');
+      }
+
+      tokenService.setToken(token, data.rememberMe);
+
+      const userData = {
+        id: response.id,
+        username: response.username,
+        email: response.email,
+        firstName: response.firstName,
+        lastName: response.lastName,
+        gender: response.gender,
+        image: response.image,
+      };
+
+      if (data.rememberMe) {
+        localStorage.setItem('user', JSON.stringify(userData));
+      } else {
+        sessionStorage.setItem('user', JSON.stringify(userData));
+      }
+
+      dispatch(setToken(token));
+      dispatch(setUser(userData));
 
       navigate('/products', { replace: true });
     } catch (err) {
       console.error('Login error:', err);
+      throw err;
     }
   };
 
   const logout = () => {
     tokenService.clearToken();
+    localStorage.removeItem('user');
+    sessionStorage.removeItem('user');
     dispatch(clearUser());
     navigate('/login', { replace: true });
   };
@@ -58,7 +74,7 @@ export const useAuth = () => {
       if (err.error) return err.error;
     }
 
-    return 'Ошибка авторизации. Проверьте логин и пароль.';
+    return 'Неверный логин или пароль';
   };
 
   const error = mutationError ? getErrorMessage(mutationError) : null;

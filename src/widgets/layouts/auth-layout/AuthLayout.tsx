@@ -1,6 +1,6 @@
-import { type FC, type ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 
-import './auth-layout.module.scss';
+import styles from './auth-layout.module.scss';
 
 interface IAuthLayoutProps {
   children: ReactNode;
@@ -8,8 +8,10 @@ interface IAuthLayoutProps {
 
 const AuthLayout: FC<IAuthLayoutProps> = ({ children }) => {
   return (
-    <div className="auth-layout">
-      <div className="auth-layout__container">{children}</div>
+    <div className={styles.authLayout}>
+      <div className={styles.container}>
+        <div className={styles.content}>{children}</div>
+      </div>
     </div>
   );
 };

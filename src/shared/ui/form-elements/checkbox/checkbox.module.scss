@@ -1,0 +1,94 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkbox {
+  display: flex;
+  gap: var(--gap-xs);
+  position: relative;
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--color-gray-600);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+
+  @media (min-width: 1920px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.checkmark svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+
+.checkmark svg path {
+  fill: none;
+  stroke: var(--color-gray-150);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+  transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
+}
+
+.hiddenInput:checked + .checkmark {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.hiddenInput:checked + .checkmark svg path {
+  stroke-dashoffset: 0;
+  stroke: white;
+}
+
+/* Ховер эффекты */
+.checkmark:hover {
+  transform: scale(1.02);
+}
+
+.hiddenInput:focus + .checkmark {
+  transform: scale(1.03);
+}
+
+.checkmark:active {
+  transform: scale(1.05);
+}
+
+.label {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.error {
+  color: var(--color-error, red);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.checkboxError .checkmark {
+  border-color: var(--color-error, red);
+}
