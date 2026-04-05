@@ -1,0 +1,63 @@
+:root {
+  // Colors
+  --color-primary: #242edb;
+  --color-primary-light: #797fea;
+  --color-secondary: #3c538e;
+  --color-success: #ebf3ea;
+  --color-error: #f11010;
+
+  // Grayscale
+  --color-white: #ffffff;
+  --color-gray-50: #f9f9f9;
+  --color-gray-100: #f3f3f3;
+  --color-gray-200: #ebebeb;
+  --color-gray-300: #e2e2e2;
+  --color-gray-400: #ececeb;
+  --color-gray-500: #b2b3b9;
+  --color-gray-600: #9c9c9c;
+  --color-gray-700: #999999;
+  --color-gray-800: #6c6c6c;
+  --color-gray-900: #232323;
+
+  // Fonts
+  --font-family-inter: 'Inter', sans-serif;
+  --font-family-cairo: 'Cairo', sans-serif;
+  --font-family-open-sans: 'Open Sans', sans-serif;
+  --font-family-roboto-mono: 'Roboto Mono', monospace;
+
+  // Font sizes
+  --font-size-display: 40px;
+  --font-size-title-large: 24px;
+  --font-size-title-medium: 20px;
+  --font-size-title-small: 16px;
+  --font-size-subtitle: 14px;
+  --font-size-body: 16px;
+  --font-size-body-small: 14px;
+  --font-size-body-medium: 18px;
+  --font-size-caption: 16px;
+  --font-size-button: 16px;
+
+  // Line heights
+  --line-height-display: 110%;
+  --line-height-title-large: 100%;
+  --line-height-title-medium: 100%;
+  --line-height-title-small: 100%;
+  --line-height-subtitle: 100%;
+  --line-height-body: 150%;
+  --line-height-caption: 110%;
+
+  // Letter spacing
+  --letter-spacing-display: -1.5%;
+  --letter-spacing-default: 0%;
+
+  // Shadows
+  --shadow-sm: 0px 24px 32px -14px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0px 24px 32px rgba(0, 0, 0, 0.1);
+
+  // Border radius
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
