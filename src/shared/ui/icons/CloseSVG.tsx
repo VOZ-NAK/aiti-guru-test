@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import type { IIcon } from './types';
 
-const CloseSVG: FC<IIcon> = ({ size = 17, color = 'currentColor', ...props }) => (
+const CloseSVG: FC<IIcon> = ({ size = 16, color = 'currentColor', ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}

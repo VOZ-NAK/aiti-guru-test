@@ -58,13 +58,13 @@
   letter-spacing: var(--letter-spacing-default);
 }
 
-// Body medium (Inter Medium)
+// Body medium
 .text-body-medium {
   font-family: var(--font-family-inter);
   font-weight: 500;
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-md);
   line-height: var(--line-height-body);
-  letter-spacing: var(--letter-spacing-default);
+  letter-spacing: var(--letter-spacing-display);
 }
 
 .text-body-large {

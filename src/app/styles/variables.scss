@@ -10,6 +10,7 @@
   --color-white: #ffffff;
   --color-gray-50: #f9f9f9;
   --color-gray-100: #f3f3f3;
+  --color-gray-150: #ededed;
   --color-gray-200: #ebebeb;
   --color-gray-300: #e2e2e2;
   --color-gray-400: #ececeb;
@@ -26,16 +27,14 @@
   --font-family-roboto-mono: 'Roboto Mono', monospace;
 
   // Font sizes
-  --font-size-display: 40px;
-  --font-size-title-large: 24px;
-  --font-size-title-medium: 20px;
-  --font-size-title-small: 16px;
-  --font-size-subtitle: 14px;
-  --font-size-body: 16px;
-  --font-size-body-small: 14px;
-  --font-size-body-medium: 18px;
-  --font-size-caption: 16px;
-  --font-size-button: 16px;
+  --font-size-3xl: 40px;
+  --font-size-2xl: 32px;
+  --font-size-xl: 24px;
+  --font-size-lg: 20px;
+  --font-size-md: 18px;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
 
   // Line heights
   --line-height-display: 110%;
@@ -60,4 +59,31 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+
+  // Spacing
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-18: 18px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+
+  // Gap
+  --gap-4xs: var(--spacing-4);
+  --gap-3xs: var(--spacing-6);
+  --gap-2xs: var(--spacing-8);
+  --gap-xs: var(--spacing-10);
+  --gap-sm: var(--spacing-12);
+  --gap-md: var(--spacing-16);
+  --gap-lg: var(--spacing-20);
+  --gap-xl: var(--spacing-24);
+  --gap-2xl: var(--spacing-32);
+  --gap-3xl: var(--spacing-40);
 }

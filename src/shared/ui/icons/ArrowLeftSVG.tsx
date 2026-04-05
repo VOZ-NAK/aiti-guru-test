@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import type { IIcon } from './types';
 
-const ArrowLeftSVG: FC<IIcon> = ({ size = 20, color = 'currentColor', ...props }) => (
+const ArrowLeftSVG: FC<IIcon> = ({ size = 24, color = 'currentColor', ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
