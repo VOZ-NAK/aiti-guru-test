@@ -11,7 +11,8 @@ export type TVariant =
   | 'opensans-16'
   | 'opensans-14'
   | 'opensans-16-bold'
-  | 'roboto-16';
+  | 'roboto-16'
+  | 'roboto-18-regular';
 
 export interface TypographyProps extends ComponentProps<'p'> {
   variant?: TVariant;
@@ -31,4 +32,5 @@ export const variantStyles: Record<TVariant, string> = {
   'opensans-14': 'text-opensans-14',
   'opensans-16-bold': 'text-opensans-16-bold',
   'roboto-16': 'text-roboto-16',
+  'roboto-18-regular': 'text-roboto-18-regular',
 };

@@ -1,0 +1,22 @@
+.searchHeader {
+  padding: 26px 30px;
+  flex-shrink: 0;
+  background-color: var(--color-white);
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+  position: relative;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 26px 15px;
+    flex-direction: column;
+  }
+}
+
+.searchTitle {
+  @media (min-width: 768px) {
+    left: 30px;
+    position: absolute;
+  }
+}

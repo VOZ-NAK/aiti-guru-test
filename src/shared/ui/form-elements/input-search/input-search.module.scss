@@ -1,0 +1,24 @@
+.inputSearch {
+  position: relative;
+  padding: 12px 20px 12px calc(20px + 24px + 8px);
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 55%;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  input {
+    width: 100%;
+    background-color: var(--color-gray-100);
+  }
+}
+
+.iconSearch {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}

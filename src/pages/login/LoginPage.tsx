@@ -53,6 +53,9 @@ const LoginPage = () => {
 
   return (
     <div className={styles.loginPage}>
+      <div className={styles.logo}>
+        <img src="logo.svg" alt="logo" />
+      </div>
       <div className={styles.header}>
         <Typography variant="inter-40" as="h1">
           Добро пожаловать!
@@ -84,9 +87,7 @@ const LoginPage = () => {
 
         {(error || errors.root?.message) && (
           <div className={styles.errorMessage}>
-            <Typography variant="inter-16" color="error">
-              {error || errors.root?.message}
-            </Typography>
+            <Typography variant="inter-16">{error || errors.root?.message}</Typography>
           </div>
         )}
 

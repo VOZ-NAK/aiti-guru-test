@@ -8,6 +8,7 @@
 
   // Grayscale
   --color-white: #ffffff;
+  --color-gray-25: #f6f6f6;
   --color-gray-50: #f9f9f9;
   --color-gray-100: #f3f3f3;
   --color-gray-150: #ededed;
@@ -27,6 +28,7 @@
   --font-family-cairo: 'Cairo', sans-serif;
   --font-family-open-sans: 'Open Sans', sans-serif;
   --font-family-roboto-mono: 'Roboto Mono', monospace;
+  --font-family-roboto: 'Roboto', sans-serif;
 
   // Font sizes
   --font-size-3xl: 40px;
@@ -78,6 +80,7 @@
   --spacing-18: 18px;
   --spacing-20: 20px;
   --spacing-24: 24px;
+  --spacing-30: 30px;
   --spacing-32: 32px;
   --spacing-40: 40px;
   --spacing-48: 48px;
@@ -92,6 +95,7 @@
   --gap-md: var(--spacing-16);
   --gap-lg: var(--spacing-20);
   --gap-xl: var(--spacing-24);
+  --gap-1xl: var(--spacing-30);
   --gap-2xl: var(--spacing-32);
   --gap-3xl: var(--spacing-40);
 }

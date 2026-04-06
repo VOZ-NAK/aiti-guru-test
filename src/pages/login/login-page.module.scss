@@ -4,6 +4,32 @@
   gap: var(--gap-2xl);
 }
 
+.logo {
+  align-self: center;
+  border-radius: 50%;
+  position: relative;
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(180deg, #ededed 20%, rgba(237, 237, 237, 0) 100%);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -55,4 +81,8 @@
   display: flex;
   justify-content: center;
   color: var(--color-gray-800);
+}
+
+.errorMessage {
+  color: var(--color-error);
 }

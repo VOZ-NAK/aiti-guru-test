@@ -62,7 +62,7 @@
 
 .text-cairo-14 {
   font-family: var(--font-family-cairo);
-  font-weight: 600;
+  font-weight: 400;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-subtitle);
   letter-spacing: var(--letter-spacing-default);
@@ -99,6 +99,15 @@
   font-weight: 400;
   font-size: var(--font-size-base);
   line-height: var(--line-height-caption);
+  letter-spacing: var(--letter-spacing-default);
+}
+
+// Roboto (обычный, не Mono)
+.text-roboto-18-regular {
+  font-family: var(--font-family-roboto);
+  font-weight: 400;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-body);
   letter-spacing: var(--letter-spacing-default);
 }
 
