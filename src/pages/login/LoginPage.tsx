@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { useAuth } from '@/features/auth/lib/useAuth';
@@ -21,7 +20,6 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
     setError,
-    setValue,
     watch,
   } = useForm<LoginFormData>({
     defaultValues: {
@@ -34,11 +32,6 @@ const LoginPage = () => {
 
   const loginValue = watch('login');
   const passwordValue = watch('password');
-
-  useEffect(() => {
-    setValue('login', 'emilys');
-    setValue('password', 'emilyspass');
-  }, [setValue]);
 
   const onSubmit = async (data: LoginFormData) => {
     try {

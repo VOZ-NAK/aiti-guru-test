@@ -10,7 +10,7 @@ function App() {
   useAuthInit();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/aiti-guru-test">
       <Navigation />
       <Toaster position="top-right" />
     </BrowserRouter>
